@@ -1,12 +1,13 @@
-const display = document.getElementById("display")
-const plusButton = document.getElementById("plus-button")
+const figure = document.getElementById("figure")
+const squareButton = document.getElementById("square-button")
+const circleButton = document.getElementById("circle-button")
 
-let count = 0
+circleButton.onclick = function () {
+  // figure に rounded クラスを追加する
+  figure.classList.add("rounded")
+}
 
-// ボタン要素のonclickハンドラに関数を代入する
-plusButton.onclick = function () {
-  // count を更新
-  count += 1
-  // count を表示
-  display.textContent = count
+squareButton.onclick = function () {
+  // figure から rounded クラスを削除する
+  figure.classList.remove("rounded")
 }
